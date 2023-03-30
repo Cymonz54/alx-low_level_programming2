@@ -8,18 +8,18 @@
 
 char *leet(char *n)
 {
-	const char *letters = "aeotlAEOTL";
-	const char *replacements = "43071043";
-	size_t len = strlen(n);
+	int i;
+	int j;
+	char s1[] = "aAeEoOtTlL";
+	char s2[] = "4433007711";
 
-	for (size_t i = 0; i < len; i++)
+	for (i = 0; n[i] != '\0'; i++)
 	{
-		for (int j = 0; j < 10; j += 2)
+		for (j = 0; j < 10; j++)
 		{
-			if (n[i] == letters[j] || n[i] == letters[j + 1])
+			if (n[i] == s1[j])
 			{
-				n[i] = replacements[j / 2];
-				break;
+				n[i] = s2[j];
 			}
 		}
 	}

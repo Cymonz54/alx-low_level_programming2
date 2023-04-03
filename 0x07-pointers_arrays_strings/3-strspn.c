@@ -1,4 +1,4 @@
-#iclude "main.h"
+#include "main.h"
 
 /**
  * _strspn - Entry point
@@ -7,7 +7,7 @@
  * Return: Always 0 (Success)
  */
 
-unsigned int _strspn(char *s, char * char *accept)
+unsigned int _strspn(char *s, char *accept)
 
 {
 	unsigned int n = 0;
